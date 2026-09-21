@@ -103,10 +103,26 @@
 
 ## Phase 9 — CI/CD
 
-- [ ] GitHub Actions CI
-- [ ] Pull request checks
-- [ ] Production build
-- [ ] Vercel project
-- [ ] Preview deployments
-- [ ] Production deployment
-- [ ] Domain configuration
+- [x] GitHub Actions CI
+- [x] Pull request checks
+- [x] Production build
+- [x] Vercel project
+- [ ] Preview deployments (blocked, see note)
+- [x] Production deployment
+- [ ] Domain configuration (blocked, see note)
+
+Notes:
+
+- **Preview deployments** need the Vercel GitHub App installed with
+  access to `hrquinones/ricardo-portfolio` (Vercel dashboard → Project
+  → Settings → Git → Connect Git Repository, or github.com/apps/vercel
+  → Configure). This is a one-time GitHub-side authorization that can't
+  be granted via API token — once installed, every PR gets an automatic
+  preview deployment and pushes to `main` auto-deploy to production,
+  completing the GitHub → PR → CI → Preview → merge main → Production
+  flow.
+- **Domain configuration**: production domain is still TBD per
+  `docs/06-deployment-spec.md`. Once registered, attach it in Vercel
+  (Project → Settings → Domains) and set `SITE_URL` in Vercel's
+  environment variables to match — `lib/site-config.ts` already reads
+  it and falls back correctly until then.
