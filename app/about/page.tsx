@@ -1,6 +1,17 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { profile } from "@/content/profile";
+
+const description =
+  "Senior Backend Engineer and Tech Lead focused on scalable architecture, legacy modernization, and measurable engineering impact.";
+
+export const metadata: Metadata = {
+  title: "About",
+  description,
+  alternates: { canonical: "/about" },
+  openGraph: { title: "About", description, url: "/about" },
+};
 
 export default function AboutPage() {
   return (

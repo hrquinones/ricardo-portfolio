@@ -1,8 +1,19 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { experience } from "@/content/experience";
 import { profile } from "@/content/profile";
 import { formatDateRange } from "@/lib/format-date";
+
+const description =
+  "Download Ricardo Quiñones' CV — Senior Backend Engineer and Tech Lead with 19+ years of experience.";
+
+export const metadata: Metadata = {
+  title: "CV",
+  description,
+  alternates: { canonical: "/cv" },
+  openGraph: { title: "CV", description, url: "/cv" },
+};
 
 export default function CVPage() {
   return (

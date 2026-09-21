@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Badge } from "@/components/ui/Badge";
@@ -19,6 +20,28 @@ export function generateStaticParams() {
 
 interface CaseStudyPageProps {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({
+  params,
+}: CaseStudyPageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  try {
+    const { meta } = getCaseStudyBySlug(slug);
+    return {
+      title: meta.title,
+      description: meta.subtitle,
+      alternates: { canonical: `/work/${meta.slug}` },
+      openGraph: {
+        title: meta.title,
+        description: meta.subtitle,
+        url: `/work/${meta.slug}`,
+      },
+    };
+  } catch {
+    return {};
+  }
 }
 
 export default async function CaseStudyPage({ params }: CaseStudyPageProps) {

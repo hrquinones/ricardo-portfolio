@@ -79,14 +79,14 @@
 
 ## Phase 7 — SEO
 
-- [ ] Global metadata
-- [ ] Page metadata
-- [ ] Canonical URLs
-- [ ] Sitemap
-- [ ] Robots
-- [ ] Open Graph image
-- [ ] JSON-LD Person
-- [ ] JSON-LD WebSite
+- [x] Global metadata
+- [x] Page metadata
+- [x] Canonical URLs
+- [x] Sitemap
+- [x] Robots
+- [x] Open Graph image
+- [x] JSON-LD Person
+- [x] JSON-LD WebSite
 
 ## Phase 8 — QA
 

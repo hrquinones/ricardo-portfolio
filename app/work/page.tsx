@@ -1,7 +1,18 @@
+import type { Metadata } from "next";
 import { CaseStudyGrid } from "@/components/work/CaseStudyGrid";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { getAllCaseStudies } from "@/lib/content/case-studies";
+
+const description =
+  "Case studies in backend architecture, microservices, payments, and legacy modernization — with the measurable outcomes behind them.";
+
+export const metadata: Metadata = {
+  title: "Work",
+  description,
+  alternates: { canonical: "/work" },
+  openGraph: { title: "Work", description, url: "/work" },
+};
 
 export default function WorkPage() {
   const caseStudies = getAllCaseStudies();

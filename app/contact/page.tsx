@@ -1,6 +1,17 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { profile } from "@/content/profile";
+
+const description =
+  "Get in touch with Ricardo Quiñones for backend architecture, modernization, and tech leadership opportunities.";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description,
+  alternates: { canonical: "/contact" },
+  openGraph: { title: "Contact", description, url: "/contact" },
+};
 
 export default function ContactPage() {
   return (
