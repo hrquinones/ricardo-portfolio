@@ -22,15 +22,15 @@
 
 ## Phase 2 — Design system
 
-- [ ] Define design tokens
-- [ ] Implement typography
-- [ ] Implement Container
-- [ ] Implement Button
-- [ ] Implement Badge
-- [ ] Implement SectionHeading
-- [ ] Implement LinkArrow
-- [ ] Implement dark-first theme
-- [ ] Add reduced-motion support
+- [x] Define design tokens
+- [x] Implement typography
+- [x] Implement Container
+- [x] Implement Button
+- [x] Implement Badge
+- [x] Implement SectionHeading
+- [x] Implement LinkArrow
+- [x] Implement dark-first theme
+- [x] Add reduced-motion support
 
 ## Phase 3 — Content layer
 
