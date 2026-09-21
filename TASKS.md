@@ -71,11 +71,11 @@
 
 ## Phase 6 — Experience / About / CV / Contact
 
-- [ ] Experience page
-- [ ] About page
-- [ ] CV page
-- [ ] Contact page
-- [ ] CV PDF asset
+- [x] Experience page
+- [x] About page
+- [x] CV page
+- [x] Contact page
+- [x] CV PDF asset
 
 ## Phase 7 — SEO
 
