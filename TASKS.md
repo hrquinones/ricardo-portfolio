@@ -1,24 +1,27 @@
 # Portfolio Implementation Tasks
 
 ## Phase 0 — Repository setup
-- [ ] Initialize Git repository
-- [ ] Add `AGENTS.md`
-- [ ] Add portfolio specs under `docs/`
-- [ ] Add `TASKS.md`
-- [ ] Add `README.md`
+
+- [x] Initialize Git repository
+- [x] Add `AGENTS.md`
+- [x] Add portfolio specs under `docs/`
+- [x] Add `TASKS.md`
+- [x] Add `README.md`
 
 ## Phase 1 — Foundation
-- [ ] Initialize Next.js App Router
-- [ ] Configure TypeScript strict mode
-- [ ] Configure Tailwind CSS
-- [ ] Configure ESLint
-- [ ] Configure Prettier
-- [ ] Configure Vitest
-- [ ] Configure Playwright
-- [ ] Add base scripts
-- [ ] Create project folder structure
+
+- [x] Initialize Next.js App Router
+- [x] Configure TypeScript strict mode
+- [x] Configure Tailwind CSS
+- [x] Configure ESLint
+- [x] Configure Prettier
+- [x] Configure Vitest
+- [x] Configure Playwright
+- [x] Add base scripts
+- [x] Create project folder structure
 
 ## Phase 2 — Design system
+
 - [ ] Define design tokens
 - [ ] Implement typography
 - [ ] Implement Container
@@ -30,6 +33,7 @@
 - [ ] Add reduced-motion support
 
 ## Phase 3 — Content layer
+
 - [ ] Add profile data
 - [ ] Add impact metrics
 - [ ] Add experience data
@@ -40,6 +44,7 @@
 - [ ] Create initial case studies
 
 ## Phase 4 — Home
+
 - [ ] Navbar
 - [ ] Hero
 - [ ] Architecture visual
@@ -52,6 +57,7 @@
 - [ ] Footer
 
 ## Phase 5 — Work
+
 - [ ] Work index
 - [ ] Case Study template
 - [ ] ArchitectureDiagram
@@ -64,6 +70,7 @@
 - [ ] Legacy Modernization
 
 ## Phase 6 — Experience / About / CV / Contact
+
 - [ ] Experience page
 - [ ] About page
 - [ ] CV page
@@ -71,6 +78,7 @@
 - [ ] CV PDF asset
 
 ## Phase 7 — SEO
+
 - [ ] Global metadata
 - [ ] Page metadata
 - [ ] Canonical URLs
@@ -81,6 +89,7 @@
 - [ ] JSON-LD WebSite
 
 ## Phase 8 — QA
+
 - [ ] Unit tests
 - [ ] Component tests where behavior matters
 - [ ] E2E critical flows
@@ -93,6 +102,7 @@
 - [ ] No console errors
 
 ## Phase 9 — CI/CD
+
 - [ ] GitHub Actions CI
 - [ ] Pull request checks
 - [ ] Production build

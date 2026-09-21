@@ -5,6 +5,7 @@
 This repository contains the personal engineering portfolio of Ricardo Quiñones.
 
 The portfolio must communicate:
+
 - Senior Backend Engineering experience
 - Tech Lead experience
 - Software architecture expertise
@@ -14,11 +15,13 @@ The portfolio must communicate:
 ## Source of truth
 
 Before implementing or changing anything, read:
+
 1. `docs/01-strategy-content-spec.md`
 2. `docs/02-design-ux-spec.md`
 3. `docs/03-technical-architecture-spec.md`
 
 For specialized work also read:
+
 - `docs/04-seo-spec.md`
 - `docs/05-testing-spec.md`
 - `docs/06-deployment-spec.md`
@@ -40,6 +43,7 @@ For specialized work also read:
 ## Development workflow
 
 Before coding:
+
 1. Read the relevant specs.
 2. Inspect the existing implementation.
 3. Identify affected files and components.
@@ -47,6 +51,7 @@ Before coding:
 5. Update documentation if an architectural decision changes.
 
 After coding:
+
 1. Run typecheck.
 2. Run lint.
 3. Run unit tests.
@@ -57,6 +62,7 @@ After coding:
 ## Definition of Done
 
 A feature is complete only when:
+
 - TypeScript passes.
 - ESLint passes.
 - Relevant tests pass.

@@ -3,6 +3,7 @@
 ## 1. Goals
 
 Optimize for:
+
 1. Performance
 2. SEO
 3. Maintainability
@@ -16,6 +17,7 @@ Static-first and content-driven.
 Avoid infrastructure that does not create user value.
 
 Initial site does not require:
+
 - custom backend;
 - database;
 - Redis;
@@ -94,6 +96,7 @@ Client Components only where state, browser APIs, event-driven interaction, or a
 `app/page.tsx` should compose sections rather than contain large implementation details.
 
 Conceptual:
+
 ```tsx
 <Hero />
 <MetricsSection />
@@ -109,6 +112,7 @@ Conceptual:
 Separate content from presentation.
 
 Structured content:
+
 - profile;
 - metrics;
 - experience;
@@ -121,6 +125,7 @@ Use MDX for rich case-study content.
 ## 9. Case-study frontmatter
 
 Conceptual schema:
+
 ```ts
 interface CaseStudyMeta {
   slug: string;
@@ -142,6 +147,7 @@ Case studies live under:
 `content/case-studies/*.mdx`
 
 MDX may embed approved React components:
+
 - Metric
 - ArchitectureDiagram
 - BeforeAfter
@@ -152,6 +158,7 @@ MDX may embed approved React components:
 Tailwind CSS is the primary styling layer.
 
 Global CSS should contain:
+
 - design tokens;
 - base typography;
 - global selection/scroll behavior where appropriate;
@@ -162,6 +169,7 @@ Avoid large amounts of bespoke CSS.
 ## 12. Design tokens
 
 Centralize:
+
 - background;
 - surfaces;
 - borders;
@@ -184,6 +192,7 @@ Prefer SVG/HTML/CSS for architectural visuals.
 ## 14. Architecture diagrams
 
 Default:
+
 - SVG;
 - CSS;
 - React when interaction is needed.
@@ -193,6 +202,7 @@ Do not use Canvas/WebGL unless a future requirement genuinely requires it.
 ## 15. SEO
 
 Every public page needs appropriate:
+
 - title;
 - description;
 - canonical URL;
@@ -201,6 +211,7 @@ Every public page needs appropriate:
 Global metadata belongs in `app/layout.tsx`.
 
 Use:
+
 - `app/sitemap.ts`
 - `app/robots.ts`
 - `app/opengraph-image.tsx`
@@ -210,6 +221,7 @@ Add JSON-LD for Person and WebSite.
 ## 16. Accessibility
 
 Required:
+
 - semantic HTML;
 - keyboard navigation;
 - focus states;
@@ -227,6 +239,7 @@ E2E: Playwright.
 Test meaningful behavior rather than every static markup detail.
 
 Critical E2E:
+
 - Home → Work → Case Study
 - Home → CV
 - mobile navigation
@@ -236,6 +249,7 @@ Critical E2E:
 ## 18. Quality scripts
 
 Expected scripts:
+
 ```text
 dev
 build
@@ -257,6 +271,7 @@ verify
 GitHub Actions on pull requests and pushes to main.
 
 Minimum:
+
 - install dependencies;
 - typecheck;
 - lint;
@@ -274,6 +289,7 @@ Flow:
 GitHub → PR → CI → Preview → merge main → Production.
 
 Environments:
+
 - Local
 - Preview
 - Production
@@ -289,11 +305,13 @@ Environments:
 ## 22. Performance
 
 Targets:
+
 - LCP < 2.5s
 - CLS < 0.1
 - INP < 200ms
 
 Prefer:
+
 - static rendering;
 - minimal client JavaScript;
 - optimized images;
@@ -302,6 +320,7 @@ Prefer:
 ## 23. Error handling
 
 Provide:
+
 - `app/not-found.tsx`
 - `app/error.tsx`
 
@@ -314,6 +333,7 @@ Architectural changes should be documented under `docs/decisions/`.
 ## 25. Definition of Done
 
 A feature is complete when:
+
 - TypeScript passes;
 - lint passes;
 - relevant tests pass;

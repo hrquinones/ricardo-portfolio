@@ -7,6 +7,7 @@ Test behavior and risk, not implementation trivia.
 ## 2. Unit tests
 
 Use Vitest for:
+
 - content validation;
 - schema validation;
 - utilities;
@@ -16,6 +17,7 @@ Use Vitest for:
 ## 3. Component tests
 
 Prioritize components with meaningful behavior:
+
 - Navbar;
 - mobile navigation;
 - theme toggle if implemented;
@@ -29,6 +31,7 @@ Static presentation components do not need exhaustive tests.
 Use Playwright.
 
 Critical flows:
+
 1. Home loads.
 2. Home → Work.
 3. Work → Case Study.
@@ -42,6 +45,7 @@ Critical flows:
 ## 5. Accessibility
 
 Check:
+
 - keyboard navigation;
 - visible focus;
 - semantic landmarks;
@@ -53,6 +57,7 @@ Check:
 ## 6. Responsive QA
 
 Review at least:
+
 - mobile;
 - tablet;
 - desktop;
@@ -61,6 +66,7 @@ Review at least:
 ## 7. Build gates
 
 Before merge:
+
 - `npm run typecheck`
 - `npm run lint`
 - `npm run test`

@@ -18,6 +18,7 @@ GitHub.
 ## Pull requests
 
 Every PR should:
+
 - run CI;
 - produce a preview deployment where configured.
 

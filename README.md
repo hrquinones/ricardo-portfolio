@@ -13,11 +13,13 @@ Start with:
 5. `TASKS.md`
 
 Specialized specs:
+
 - `docs/04-seo-spec.md`
 - `docs/05-testing-spec.md`
 - `docs/06-deployment-spec.md`
 
 Architectural decisions:
+
 - `docs/decisions/`
 
 ## Development

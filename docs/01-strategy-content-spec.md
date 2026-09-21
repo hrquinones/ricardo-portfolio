@@ -9,7 +9,9 @@ The portfolio is not a traditional online CV. It is an engineering narrative sup
 ## 2. Target audiences
 
 ### Recruiters
+
 Need to understand quickly:
+
 - who Ricardo is;
 - seniority;
 - years of experience;
@@ -19,7 +21,9 @@ Need to understand quickly:
 - how to download the CV.
 
 ### Engineering Managers / Tech Leads
+
 Need evidence of:
+
 - architecture decisions;
 - technical leadership;
 - modernization;
@@ -29,7 +33,9 @@ Need evidence of:
 - cross-functional engineering work.
 
 ### Engineers
+
 Need enough technical depth to understand:
+
 - architecture;
 - constraints;
 - trade-offs;
@@ -62,6 +68,7 @@ Core narrative:
 Use real information from the CV.
 
 Do not invent:
+
 - metrics;
 - technologies;
 - project responsibilities;
@@ -74,6 +81,7 @@ Where a metric exists, make it visually prominent.
 ## 6. Strong impact evidence
 
 The CV contains, among other achievements:
+
 - more than 19 years of software-development experience;
 - card-onboarding error reduction from 15% to below 1%;
 - 90% reduction in provider API queries;
@@ -85,6 +93,7 @@ These metrics should be connected to their corresponding case studies rather tha
 ## 7. Selected case studies
 
 Initial portfolio candidates:
+
 1. Card Onboarding Optimization
 2. Card Platform / Microservices Architecture
 3. NFC Contactless Payments
@@ -94,6 +103,7 @@ Initial portfolio candidates:
 ## 8. Case-study narrative
 
 Each case study should answer:
+
 - Context
 - Problem
 - Constraints
@@ -107,6 +117,7 @@ Each case study should answer:
 ## 9. Technical storytelling
 
 Prefer:
+
 - architecture diagrams;
 - before/after diagrams;
 - metrics;
@@ -114,6 +125,7 @@ Prefer:
 - concise technical prose.
 
 Avoid:
+
 - walls of text;
 - generic claims;
 - technology-logo walls;
@@ -122,6 +134,7 @@ Avoid:
 ## 10. Portfolio voice
 
 Tone:
+
 - senior;
 - direct;
 - technical;
@@ -133,10 +146,12 @@ Avoid generic phrases such as “passionate developer” unless supported by a c
 ## 11. Conversion goals
 
 Primary:
+
 - recruiter understands profile quickly;
 - engineering manager explores case studies;
 - visitor downloads CV or contacts Ricardo.
 
 Secondary:
+
 - demonstrate technical judgment;
 - make the portfolio itself evidence of engineering quality.

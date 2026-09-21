@@ -22,6 +22,7 @@ Do not create pages or claims solely to target keywords if they are not supporte
 ## Metadata
 
 Every indexable page:
+
 - unique title;
 - useful description;
 - canonical URL;
@@ -32,6 +33,7 @@ Every indexable page:
 Lowercase kebab-case.
 
 Examples:
+
 - `/work/card-onboarding`
 - `/work/nfc-payments`
 - `/experience`
@@ -50,6 +52,7 @@ Preview environments should not be indexed.
 ## Structured data
 
 Initial:
+
 - Person
 - WebSite
 
