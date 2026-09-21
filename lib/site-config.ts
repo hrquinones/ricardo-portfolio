@@ -1,5 +1,11 @@
 function resolveSiteUrl(): string {
   if (process.env.SITE_URL) return process.env.SITE_URL.replace(/\/$/, "");
+  // VERCEL_PROJECT_PRODUCTION_URL is the stable production alias (the
+  // project's vercel.app domain, or the custom domain once one is set) —
+  // unlike VERCEL_URL, which is a new, unique URL on every deployment.
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
   return "http://localhost:3000";
 }
