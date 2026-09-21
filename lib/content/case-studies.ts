@@ -49,3 +49,22 @@ export function getCaseStudyBySlug(slug: string): CaseStudy {
 export function getFeaturedCaseStudies(): CaseStudy[] {
   return getAllCaseStudies().filter((caseStudy) => caseStudy.meta.featured);
 }
+
+export function getRelatedCaseStudies(slug: string, limit = 2): CaseStudy[] {
+  const all = getAllCaseStudies();
+  const current = all.find((caseStudy) => caseStudy.meta.slug === slug);
+  const others = all.filter((caseStudy) => caseStudy.meta.slug !== slug);
+
+  if (!current) return others.slice(0, limit);
+
+  return others
+    .map((caseStudy) => ({
+      caseStudy,
+      sharedCategories: caseStudy.meta.category.filter((category) =>
+        current.meta.category.includes(category),
+      ).length,
+    }))
+    .sort((a, b) => b.sharedCategories - a.sharedCategories)
+    .slice(0, limit)
+    .map(({ caseStudy }) => caseStudy);
+}

@@ -49,12 +49,35 @@ A web application (PHP 7, Laravel 8, Angular 10) for case-file intake,
 backed by SQL Server for the notification workflow and MySQL for other
 system data, replacing the manual, in-person intake process end to end.
 
+<ArchitectureDiagram
+  layers={[
+    "Citizen (web)",
+    "Virtual desk (Laravel + Angular)",
+    "SQL Server / MySQL",
+  ]}
+/>
+
 ## Key technical decisions
 
 - Shipped a working MVP in one month rather than waiting for a complete
   system, so intake could move online immediately during the pandemic.
 - Focused the SQL Server optimization on the queries and transactions behind
   batch notification processing, where errors were concentrated.
+
+## Before / After
+
+<BeforeAfter
+  before={{
+    label: "Physical case-file intake",
+    description:
+      "Filing a case required an in-person visit to a physical front desk.",
+  }}
+  after={{
+    label: "Web-based virtual desk",
+    description:
+      "A fully online intake flow, live since a one-month MVP, that went on to fully replace the physical office.",
+  }}
+/>
 
 ## Result
 

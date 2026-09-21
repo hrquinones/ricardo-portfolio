@@ -58,16 +58,16 @@
 
 ## Phase 5 — Work
 
-- [ ] Work index
-- [ ] Case Study template
-- [ ] ArchitectureDiagram
-- [ ] BeforeAfter
-- [ ] ResultMetrics
-- [ ] Card Onboarding
-- [ ] Card Platform
-- [ ] NFC Payments
-- [ ] Judicial Platform
-- [ ] Legacy Modernization
+- [x] Work index
+- [x] Case Study template
+- [x] ArchitectureDiagram
+- [x] BeforeAfter
+- [x] ResultMetrics
+- [x] Card Onboarding
+- [x] Card Platform
+- [x] NFC Payments
+- [x] Judicial Platform
+- [x] Legacy Modernization
 
 ## Phase 6 — Experience / About / CV / Contact
 

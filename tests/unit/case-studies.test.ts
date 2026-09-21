@@ -4,6 +4,7 @@ import {
   getAllCaseStudySlugs,
   getCaseStudyBySlug,
   getFeaturedCaseStudies,
+  getRelatedCaseStudies,
 } from "@/lib/content/case-studies";
 
 const EXPECTED_SLUGS = [
@@ -45,5 +46,18 @@ describe("case-study content", () => {
     for (const { meta } of featured) {
       expect(meta.featured).toBe(true);
     }
+  });
+
+  it("excludes the current slug from its related case studies", () => {
+    const related = getRelatedCaseStudies("card-onboarding");
+    expect(related.length).toBeGreaterThan(0);
+    expect(related.some((cs) => cs.meta.slug === "card-onboarding")).toBe(
+      false,
+    );
+  });
+
+  it("prefers related case studies that share a category", () => {
+    const related = getRelatedCaseStudies("card-onboarding", 1);
+    expect(related[0].meta.slug).toBe("card-platform");
   });
 });

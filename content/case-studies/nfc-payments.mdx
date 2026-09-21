@@ -44,6 +44,14 @@ An NFC SDK integrated into the mobile app through a React Native bridge,
 with Bitrise CI/CD adjusted specifically to ensure correct, repeatable
 deployments of the payments feature.
 
+<ArchitectureDiagram
+  layers={[
+    "React Native app",
+    "NFC SDK bridge",
+    "Contactless payment terminal",
+  ]}
+/>
+
 ## Key technical decisions
 
 - Bridged the NFC SDK into React Native rather than building a separate
@@ -52,6 +60,21 @@ deployments of the payments feature.
 - Adjusted the Bitrise pipeline configuration specifically for this feature,
   rather than relying on the app's general build pipeline, to guarantee
   correct deployment of a payments-sensitive feature.
+
+## Before / After
+
+<BeforeAfter
+  before={{
+    label: "No contactless support",
+    description:
+      "The card product only supported traditional, contact-based payment flows.",
+  }}
+  after={{
+    label: "NFC contactless payments",
+    description:
+      "Contactless payments shipped through a React Native bridge to the NFC SDK, deployed via a tuned Bitrise pipeline.",
+  }}
+/>
 
 ## Result
 

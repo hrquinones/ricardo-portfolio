@@ -51,12 +51,38 @@ The onboarding flow was part of a larger effort that migrated a card
 observability built on Datadog and Dynatrace dashboards for monitoring the
 flow in production.
 
+<ArchitectureDiagram
+  layers={[
+    "Card app (React Native)",
+    "Onboarding service (NestJS)",
+    "Card provider API",
+  ]}
+/>
+
 ## Key technical decisions
 
 - Reduced provider API calls by 90%, instead of only handling failures after
   the fact.
 - Tied the onboarding service's monitoring directly to Datadog and Dynatrace
   dashboards, so error-rate regressions were visible immediately.
+
+## Before / After
+
+Redesigning the flow around fewer, more accurate provider calls solved the
+error rate and the cost problem at the same time.
+
+<BeforeAfter
+  before={{
+    label: "15% error rate",
+    description:
+      "Every onboarding attempt called the provider's API repeatedly, driving both errors and cost.",
+  }}
+  after={{
+    label: "<1% error rate",
+    description:
+      "Fewer, more accurate provider API calls cut both errors and the provider's cost share from 42.1% to 1.3%.",
+  }}
+/>
 
 ## Result
 

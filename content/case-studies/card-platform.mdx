@@ -51,12 +51,31 @@ between frontend and backend teams.
   streaming API and SQS to manage shipment events with configurable
   response mapping for end users.
 
+<ArchitectureDiagram
+  layers={["Product frontend", "Per-product BFF", "Card microservices"]}
+/>
+
 ## Key technical decisions
 
 - Adopted a BFF-per-product pattern instead of a single shared frontend
   contract, trading some duplication for team-level independence.
 - Structured the codebase by product module rather than by technical layer,
   as a deliberate step toward microfrontends rather than a full rewrite.
+
+## Before / After
+
+<BeforeAfter
+  before={{
+    label: "Card microlith",
+    description:
+      "A single tightly-coupled service handled issuance, tracking, and related flows together.",
+  }}
+  after={{
+    label: "Microservices + per-product BFF",
+    description:
+      "Independently evolvable services behind a per-product BFF, with reusable UI components shared across teams.",
+  }}
+/>
 
 ## Result
 

@@ -12,11 +12,11 @@ export function CaseStudyCard({ meta, index }: CaseStudyCardProps) {
 
   return (
     <article className="flex flex-col rounded-lg border border-border bg-surface p-6">
-      <div className="flex items-center justify-between">
-        <span className="font-mono text-sm text-muted">
+      <div className="flex items-start justify-between gap-3">
+        <span className="shrink-0 font-mono text-sm text-muted">
           {String(index + 1).padStart(2, "0")}
         </span>
-        <span className="font-mono text-xs tracking-widest text-accent uppercase">
+        <span className="min-w-0 flex-1 text-right font-mono text-xs tracking-widest text-accent uppercase">
           {meta.category.join(" · ")}
         </span>
       </div>
