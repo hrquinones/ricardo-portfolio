@@ -90,16 +90,16 @@
 
 ## Phase 8 — QA
 
-- [ ] Unit tests
-- [ ] Component tests where behavior matters
-- [ ] E2E critical flows
-- [ ] Keyboard navigation
-- [ ] Focus states
-- [ ] Contrast
-- [ ] Reduced motion
-- [ ] Mobile review
-- [ ] Performance review
-- [ ] No console errors
+- [x] Unit tests
+- [x] Component tests where behavior matters
+- [x] E2E critical flows
+- [x] Keyboard navigation
+- [x] Focus states
+- [x] Contrast
+- [x] Reduced motion
+- [x] Mobile review
+- [x] Performance review
+- [x] No console errors
 
 ## Phase 9 — CI/CD
 
