@@ -45,16 +45,16 @@
 
 ## Phase 4 — Home
 
-- [ ] Navbar
-- [ ] Hero
-- [ ] Architecture visual
-- [ ] Impact metrics
-- [ ] Selected Work
-- [ ] Engineering Philosophy
-- [ ] Experience Snapshot
-- [ ] Technical Expertise
-- [ ] Contact CTA
-- [ ] Footer
+- [x] Navbar
+- [x] Hero
+- [x] Architecture visual
+- [x] Impact metrics
+- [x] Selected Work
+- [x] Engineering Philosophy
+- [x] Experience Snapshot
+- [x] Technical Expertise
+- [x] Contact CTA
+- [x] Footer
 
 ## Phase 5 — Work
 
