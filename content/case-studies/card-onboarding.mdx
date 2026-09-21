@@ -1,0 +1,71 @@
+---
+slug: "card-onboarding"
+title: "Card Onboarding Optimization"
+subtitle: "Cutting the card-issuance error rate from 15% to under 1% at Personal Pay"
+category: ["Backend", "Architecture"]
+role: "Senior Backend Engineer · Tech Lead"
+technologies: ["Node.js", "NestJS", "React Native", "Datadog", "Dynatrace"]
+featured: true
+metrics:
+  - value: "<1%"
+    label: "Error rate (from 15%)"
+  - value: "-90%"
+    label: "Provider API requests"
+  - value: "42.1% → 1.3%"
+    label: "Provider cost share"
+---
+
+## Context
+
+At Personal Pay, Ricardo led the card development team responsible for the
+card-issuance ("onboarding") flow — the process that provisions a new card
+for a user.
+
+## Problem
+
+The onboarding flow had an error rate of 15%, driven in part by heavy,
+repeated calls to the card provider's API on every attempt.
+
+## Constraints
+
+The flow depended on a third-party card provider's API. Every call to that
+API carried a direct cost, so reliability and per-request cost were coupled:
+reducing errors without also reducing API traffic would not have solved the
+underlying cost problem.
+
+## Role
+
+Led the team as Senior Backend Engineer and Tech Lead, owning both the
+optimization of the onboarding flow and the broader architecture it ran on.
+
+## Approach
+
+The team redesigned the onboarding flow to minimize unnecessary calls to the
+provider's API while improving the accuracy of each request, attacking error
+rate and API cost as the same problem rather than two separate ones.
+
+## Architecture
+
+The onboarding flow was part of a larger effort that migrated a card
+"microlith" to a more efficient microservices structure, with dedicated
+observability built on Datadog and Dynatrace dashboards for monitoring the
+flow in production.
+
+## Key technical decisions
+
+- Reduced provider API calls by 90%, instead of only handling failures after
+  the fact.
+- Tied the onboarding service's monitoring directly to Datadog and Dynatrace
+  dashboards, so error-rate regressions were visible immediately.
+
+## Result
+
+- Error rate dropped from 15% to under 1%.
+- Provider API requests fell by 90%.
+- The provider's share of total cost fell from 42.1% to 1.3%.
+
+## Lessons learned
+
+The biggest lever wasn't handling errors better — it was calling the
+provider less. Treating a dependency's request volume as both a reliability
+risk and a cost center made the fix obvious once framed that way.

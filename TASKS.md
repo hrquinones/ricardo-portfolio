@@ -34,14 +34,14 @@
 
 ## Phase 3 — Content layer
 
-- [ ] Add profile data
-- [ ] Add impact metrics
-- [ ] Add experience data
-- [ ] Add expertise data
-- [ ] Define case-study schema
-- [ ] Add MDX loader/parser
-- [ ] Add Zod validation
-- [ ] Create initial case studies
+- [x] Add profile data
+- [x] Add impact metrics
+- [x] Add experience data
+- [x] Add expertise data
+- [x] Define case-study schema
+- [x] Add MDX loader/parser
+- [x] Add Zod validation
+- [x] Create initial case studies
 
 ## Phase 4 — Home
 

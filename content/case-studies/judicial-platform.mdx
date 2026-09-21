@@ -1,0 +1,72 @@
+---
+slug: "judicial-platform"
+title: "Judicial Virtual Desk"
+subtitle: "Replacing a physical case-file intake office with a web-based virtual desk during the pandemic"
+category: ["Full Stack", "Public Sector"]
+role: "Full Stack Developer"
+technologies: ["PHP 7", "Laravel 8", "Angular 10", "SQL Server", "MySQL"]
+featured: true
+metrics:
+  - value: "-50%"
+    label: "Response time per request"
+  - value: "Near-eliminated"
+    label: "Batch notification errors"
+---
+
+## Context
+
+The Poder Judicial de Santiago del Estero relied on a physical front desk
+for receiving case files. The pandemic made that intake process untenable.
+
+## Problem
+
+Case-file intake needed to move online quickly, without losing the
+reliability the physical process guaranteed, and the existing
+case-notification system was slow and error-prone under batch load.
+
+## Constraints
+
+The replacement had to work with no in-person alternative available, on a
+short timeline, and the existing SQL Server-backed notification system
+couldn't be replaced outright — it had to be optimized while remaining in
+production use.
+
+## Role
+
+Full Stack Developer, responsible for both the new virtual desk and the
+notification-system optimization.
+
+## Approach
+
+Built a functional MVP of the web-based virtual desk in one month, then
+continued evolving it until it fully replaced the physical office. In
+parallel, optimized the SQL Server queries and transactions behind the
+case-file notification system.
+
+## Architecture
+
+A web application (PHP 7, Laravel 8, Angular 10) for case-file intake,
+backed by SQL Server for the notification workflow and MySQL for other
+system data, replacing the manual, in-person intake process end to end.
+
+## Key technical decisions
+
+- Shipped a working MVP in one month rather than waiting for a complete
+  system, so intake could move online immediately during the pandemic.
+- Focused the SQL Server optimization on the queries and transactions behind
+  batch notification processing, where errors were concentrated.
+
+## Result
+
+- Response time per user request improved by 50%.
+- Batch-processing errors for notified case filings were nearly eliminated.
+- The physical intake office was fully replaced, reducing operating costs
+  and freeing resources for more critical areas — the virtual desk remains
+  in use today.
+
+## Lessons learned
+
+Shipping a working MVP under real time pressure, then iterating it to full
+replacement, was more valuable than waiting to build the complete system
+first — the pandemic didn't allow for that timeline, and the flow's
+usage confirmed the online-first approach.

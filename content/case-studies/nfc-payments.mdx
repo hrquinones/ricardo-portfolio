@@ -1,0 +1,65 @@
+---
+slug: "nfc-payments"
+title: "NFC Contactless Payments"
+subtitle: "Launching contactless card payments through a React Native SDK bridge"
+category: ["Mobile", "Payments"]
+role: "Senior Backend Engineer · Tech Lead"
+technologies: ["React Native 0.77", "NFC", "Bitrise"]
+featured: false
+metrics: []
+---
+
+## Context
+
+Personal Pay set out to add NFC contactless payments to its card product,
+extending the existing React Native mobile app.
+
+## Problem
+
+Contactless payments required native NFC capabilities that the existing
+React Native app didn't expose, plus tighter security handling than a
+typical feature rollout.
+
+## Constraints
+
+The implementation had to integrate with an NFC SDK at the native layer
+while keeping the existing React Native app as the primary interface, and it
+had to ship through a CI/CD pipeline capable of producing reliable,
+repeatable builds for a payments feature.
+
+## Role
+
+Led the frontend development for the feature as Senior Backend Engineer and
+Tech Lead, working across mobile, security, and CI/CD.
+
+## Approach
+
+Built a bridge between the NFC SDK and the React Native app, and worked
+through the security definitions the contactless flow required before it
+could ship.
+
+## Architecture
+
+An NFC SDK integrated into the mobile app through a React Native bridge,
+with Bitrise CI/CD adjusted specifically to ensure correct, repeatable
+deployments of the payments feature.
+
+## Key technical decisions
+
+- Bridged the NFC SDK into React Native rather than building a separate
+  native module surface, keeping the feature inside the existing app
+  architecture.
+- Adjusted the Bitrise pipeline configuration specifically for this feature,
+  rather than relying on the app's general build pipeline, to guarantee
+  correct deployment of a payments-sensitive feature.
+
+## Result
+
+Contactless NFC payments shipped as part of the Personal Pay card product,
+with a CI/CD pipeline tuned to deploy the feature reliably.
+
+## Lessons learned
+
+Bridging native payment capabilities into an existing app is as much a
+process problem as a technical one — the CI/CD adjustments needed to trust
+each deployment took as much deliberate work as the SDK integration itself.

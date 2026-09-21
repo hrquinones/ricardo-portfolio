@@ -1,0 +1,71 @@
+---
+slug: "card-platform"
+title: "Card Platform · Microservices Architecture"
+subtitle: 'Migrating a card "microlith" to microservices and a per-product frontend BFF'
+category: ["Architecture", "Backend"]
+role: "Senior Backend Engineer · Tech Lead"
+technologies:
+  ["Node.js", "NestJS", "Microservices", "Backend for Frontend (BFF)"]
+featured: true
+metrics: []
+---
+
+## Context
+
+Personal Pay's card platform started as a single, tightly-coupled service —
+a card "microlith" handling issuance, tracking, and related flows together.
+
+## Problem
+
+As the card product surface grew, the microlith made it harder to evolve
+individual capabilities independently, and the frontend had no clear
+boundary of responsibility per product.
+
+## Constraints
+
+Changes had to ship without disrupting the live onboarding and tracking
+flows the microlith already supported, and multiple product teams needed to
+build on top of the platform independently.
+
+## Role
+
+Designed the target architecture and led the migration as Senior Backend
+Engineer and Tech Lead.
+
+## Approach
+
+Split the microlith into a microservices structure, and in parallel
+redesigned the frontend architecture around a Backend for Frontend (BFF) per
+product, establishing service contracts with a higher level of abstraction
+between frontend and backend teams.
+
+## Architecture
+
+- A microservices backend replacing the original card microlith.
+- A per-product BFF layer separating frontend concerns from backend service
+  contracts.
+- Reusable UI components shared across product teams, with the codebase
+  restructured toward a modular, product-based organization aimed at
+  eventually evolving into microfrontends.
+- A dedicated microservice for card-shipment tracking, integrating a
+  streaming API and SQS to manage shipment events with configurable
+  response mapping for end users.
+
+## Key technical decisions
+
+- Adopted a BFF-per-product pattern instead of a single shared frontend
+  contract, trading some duplication for team-level independence.
+- Structured the codebase by product module rather than by technical layer,
+  as a deliberate step toward microfrontends rather than a full rewrite.
+
+## Result
+
+The card platform moved from a single microlith to an independently
+evolvable microservices architecture, with reusable UI components adopted by
+other teams and a shipment-tracking microservice built on the new structure.
+
+## Lessons learned
+
+Splitting a monolith pays off fastest when the frontend boundary moves with
+it. Redesigning the BFF alongside the backend, rather than after, avoided
+leaving the frontend coupled to the old service shape.
