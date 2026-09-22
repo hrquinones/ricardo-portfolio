@@ -107,20 +107,18 @@
 - [x] Pull request checks
 - [x] Production build
 - [x] Vercel project
-- [ ] Preview deployments (blocked, see note)
+- [x] Preview deployments
 - [x] Production deployment
 - [ ] Domain configuration (blocked, see note)
 
+The Vercel project is connected to `hrquinones/ricardo-portfolio`
+(confirmed via the Vercel API: `link.type: "github"`,
+`productionBranch: "main"`). Pushes to `main` now auto-deploy to
+production, and PRs get automatic preview deployments — the full
+GitHub → PR → CI → Preview → merge main → Production flow is live.
+
 Notes:
 
-- **Preview deployments** need the Vercel GitHub App installed with
-  access to `hrquinones/ricardo-portfolio` (Vercel dashboard → Project
-  → Settings → Git → Connect Git Repository, or github.com/apps/vercel
-  → Configure). This is a one-time GitHub-side authorization that can't
-  be granted via API token — once installed, every PR gets an automatic
-  preview deployment and pushes to `main` auto-deploy to production,
-  completing the GitHub → PR → CI → Preview → merge main → Production
-  flow.
 - **Domain configuration**: production domain is still TBD per
   `docs/06-deployment-spec.md`. Once registered, attach it in Vercel
   (Project → Settings → Domains) and set `SITE_URL` in Vercel's
